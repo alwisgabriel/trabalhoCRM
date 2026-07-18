@@ -1,4 +1,3 @@
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -23,8 +22,7 @@ public class Cliente {
     String consultaCidade;
 
     void registrarAuditoria(String acao, int idCliente) {
-        String registro = acao + " | ID: " + idCliente;
-        auditoria.add(registro);
+        auditoria.add(acao + " | ID: " + idCliente);
     }
 
     void cadastrar() {
@@ -46,9 +44,7 @@ public class Cliente {
         cidade.add(entradaTexto.nextLine());
 
         flStatus.add("ATIVO");
-
         registrarAuditoria("CADASTRO", id);
-
         id++;
     }
 
@@ -61,31 +57,30 @@ public class Cliente {
         System.out.println("Insira a cidade do cliente:");
         consultaCidade = entradaTexto.nextLine();
 
-        for (int l = 0; l < nmCliente.size(); l++) {
+        for (int i = 0; i < nmCliente.size(); i++) {
+            if (nmCliente.get(i).equals(consultaNm) && nuCpf.get(i).equals(consultaCpf) && cidade.get(i).equals(consultaCidade)) {
+                System.out.println("Insira o nome a ser atualizado:");
+                nmCliente.set(i, entradaTexto.nextLine());
 
-            if (nmCliente.get(l).equals(consultaNm) && nuCpf.get(l).equals(consultaCpf) && cidade.get(l).equals(consultaCidade)) {
+                System.out.println("Insira o cpf a ser atualizado:");
+                nuCpf.set(i, entradaTexto.nextLine());
 
-            System.out.println("Insira o nome a ser atualizado:");
-            nmCliente.set(l, entradaTexto )
+                System.out.println("Insira a cidade a ser atualiada:");
+                cidade.set(i, entradaTexto.nextLine());
 
-            System.out.println("Insira o cpf a ser atualizado:");
-            nuCpf.set(resposta, entradaTexto.nextLine());
+                System.out.println("Insira a idade a ser atualizada:");
+                nuIdade.set(i, entradaNumero.nextInt());
 
-            System.out.println("Insira a cidade a ser atualiada:");
-            cidade.set(resposta, entradaTexto.nextLine());
+                System.out.println("Insira o salário a ser atualizado:");
+                vlSalario.set(i, entradaNumero.nextDouble());
 
-            System.out.println("Insira a idade a ser atualizada:");
-            nuIdade.set(resposta, entradaNumero.nextInt());
-
-            System.out.println("Insira o salário a ser atualizado:");
-            vlSalario.set(resposta, entradaNumero.nextDouble());
-
-
-            registrarAuditoria("ALTERACAO", resposta);
-
-        } else {
-            System.out.println("Cliente não encontrado");
+                registrarAuditoria("ALTERACAO", i);
+                System.out.println("Cliente atualizado com sucesso!");
+                return;
+            }
         }
+
+        System.out.println("Cliente não encontrado");
     }
 
     void deletarClientes() {
@@ -93,12 +88,12 @@ public class Cliente {
         resposta = entradaNumero.nextInt();
 
         if (resposta >= 0 && resposta < nmCliente.size()) {
-            nmCliente.remove(resposta);
-            nuCpf.remove(resposta);
-            nuIdade.remove(resposta);
-            vlSalario.remove(resposta);
-            flStatus.remove(resposta);
-            cidade.remove(resposta);
+            nmCliente.remove((int) resposta);
+            nuCpf.remove((int) resposta);
+            nuIdade.remove((int) resposta);
+            vlSalario.remove((int) resposta);
+            flStatus.remove((int) resposta);
+            cidade.remove((int) resposta);
             System.out.println("Clientes excluidos com sucesso!");
         } else {
             System.out.println("Cliente não encontrado");
@@ -112,13 +107,9 @@ public class Cliente {
         if (resposta >= 0 && resposta < flStatus.size()) {
             System.out.println("Status atual: " + flStatus.get(resposta));
             System.out.println("Digite o novo status:");
-            String statusAntigo = flStatus.get(resposta); // Para mostrar o antigo
             entradaTexto.nextLine();
-            String statusNovo = entradaTexto.nextLine();
-            flStatus.set(resposta, statusNovo);
-
+            flStatus.set(resposta, entradaTexto.nextLine());
             registrarAuditoria("ALTERACAO_STATUS", resposta);
-
             System.out.println("Status alterado com sucesso!");
         } else {
             System.out.println("Cliente não encontrado");
@@ -141,27 +132,25 @@ public class Cliente {
         consultaCidade = entradaTexto.nextLine();
 
         for (int i = 0; i < nmCliente.size(); i++) {
-
             if (nmCliente.get(i).equals(consultaNm) && nuCpf.get(i).equals(consultaCpf) && cidade.get(i).equals(consultaCidade)) {
-
                 System.out.printf("O nome do cliente é:\n" + nmCliente.get(i));
                 System.out.printf("O CPF do cliente é:\n" + nuCpf.get(i));
                 System.out.printf("A cidade do cliente é:\n" + cidade.get(i));
                 System.out.printf("A idade do cliente é:\n" + nuIdade.get(i));
                 System.out.printf("O salario do cliente é:\n" + vlSalario.get(i));
                 System.out.println("O status do cliente é:\n" + flStatus.get(i));
-
-            } else {
-                System.out.println("Cliente não encontrado!");
+                return;
             }
         }
+
+        System.out.println("Cliente não encontrado!");
     }
+
     void relatorio() {
-            System.out.printf("Quantidade de clientes é: " + nmCliente.size() +"\n");
+        System.out.printf("Quantidade de clientes é: " + nmCliente.size() + "\n");
 
-            for (int j = 0; j < nmCliente.size(); j++){
-                System.out.printf("O status do cliente " + nmCliente.get(j) + " é: " + flStatus.get(j) + "\n");
-
-            }
+        for (int j = 0; j < nmCliente.size(); j++) {
+            System.out.printf("O status do cliente " + nmCliente.get(j) + " é: " + flStatus.get(j) + "\n");
         }
     }
+}
