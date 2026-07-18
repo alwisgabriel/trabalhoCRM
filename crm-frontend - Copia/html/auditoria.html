@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Auditoria</title>
+
+<link rel="stylesheet" href="../styles/layout.css">
+<link rel="stylesheet" href="../styles/global.css">
+<link rel="stylesheet" href="../styles/home.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <nav class="navbar">
+        <ul>
+            <li><a href="cadastrar.html"><button>Cadastrar</button></a></li>
+            <li><a href="consultar.html"><button>Consultar</button></a></li>
+            <li><a href="relatorio.html"><button>Relatórios</button></a></li>
+            <li><a href="auditoria.html"><button>Auditoria</button></a></li>
+            <li class="home-li"><a href="home.html"><button>Home</button></a></li>
+        </ul>
+    </nav>
+        </header>
+
+        <div class="box">
+
+            <table>
+
+                <thead>
+                    <tr>
+                        <th>Data</th>
+                        <th>Hora</th>
+                        <th>Ação</th>
+                        <th>Cliente</th>
+                    </tr>
+                </thead>
+
+                <tbody id="listaAuditoria">
+      
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+<script src="../js/banco.js"></script>
+<script src="../js/auditoria.js"></script>
+
+<script>
+
+mostrarAuditoria();
+
+</script>
+</body>
+
+</html>
+

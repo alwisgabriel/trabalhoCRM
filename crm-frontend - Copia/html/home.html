@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CRM - Home</title>
+
+    <link rel="stylesheet" href="../styles/layout.css">
+    <link rel="stylesheet" href="../styles/global.css">
+    <link rel="stylesheet" href="../styles/home.css">
+
+</head>
+
+<body>
+
+
+<header>
+
+    <nav class="navbar">
+
+        <ul>
+
+            <li>
+                <a href="cadastrar.html">
+                    <button>Cadastrar</button>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="consultar.html">
+                    <button>Consultar</button>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="relatorio.html">
+                    <button>Relatórios</button>
+                </a>
+            </li>
+
+
+            <li>
+                <a href="auditoria.html">
+                    <button>Auditoria</button>
+                </a>
+            </li>
+
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+
+<main class="container">
+
+
+<section class="boas-vindas">
+
+    <h1>CRM - Cadastro de Clientes</h1>
+
+    <p>
+        Bem-vindo ao sistema. Aqui você acompanha os principais indicadores
+        dos clientes cadastrados.
+    </p>
+
+</section>
+
+
+
+
+<section class="cards">
+
+
+    <div class="card">
+
+        <h3>Total de Clientes</h3>
+
+        <span id="totalClientes">
+            0
+        </span>
+
+    </div>
+
+
+
+
+    <div class="card">
+
+        <h3>Clientes Ativos</h3>
+
+        <span id="clientesAtivos">
+            0
+        </span>
+
+    </div>
+
+
+
+
+
+    <div class="card">
+
+        <h3>Clientes Inativos</h3>
+
+        <span id="clientesInativos">
+            0
+        </span>
+
+    </div>
+
+
+
+
+
+    <div class="card">
+
+        <h3>Cadastros Hoje</h3>
+
+        <span id="cadastrosHoje">
+            0
+        </span>
+
+    </div>
+
+
+</section>
+
+
+
+
+
+
+<section class="box">
+
+
+<h2>
+    Últimos Clientes Cadastrados
+</h2>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>
+Nome
+</th>
+
+
+<th>
+CPF
+</th>
+
+
+<th>
+Status
+</th>
+
+
+<th>
+Cadastro
+</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="ultimosClientes">
+
+
+</tbody>
+
+
+
+</table>
+
+
+</section>
+
+
+
+
+
+<section class="box">
+
+
+<h2>
+Resumo do Sistema
+</h2>
+
+
+<ul>
+
+
+<li>
+✔ Clientes ativos:
+<span id="resumoAtivos">0</span>
+</li>
+
+
+
+<li>
+✔ Clientes inativos:
+<span id="resumoInativos">0</span>
+</li>
+
+
+
+<li>
+✔ Total cadastrado:
+<span id="resumoTotal">0</span>
+</li>
+
+
+</ul>
+
+
+
+</section>
+
+
+
+</main>
+
+
+
+
+<footer>
+
+CRM - Sistema de Clientes
+
+</footer>
+
+
+
+
+<script src="../js/banco.js"></script>
+
+<script src="../js/home.js"></script>
+
+
+</body>
+
+</html>

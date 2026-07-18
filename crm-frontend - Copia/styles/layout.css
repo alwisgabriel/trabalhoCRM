@@ -1,0 +1,31 @@
+:root{
+
+    /* Cores principais */
+    --cor-primaria:#2563eb;
+    --cor-primaria-hover:#1d4ed8;
+
+    /* Fundo */
+    --cor-fundo:#f4f6f9;
+    --cor-branca:#ffffff;
+    --cor-hover-linha:#f7f7f7;
+
+    /* Textos */
+    --cor-texto:#1f2937;
+    --cor-texto-secundario:#666666;
+
+    /* Status */
+    --cor-sucesso:#16a34a;
+    --cor-erro:#dc2626;
+
+    /* Bordas */
+    --cor-borda:#dddddd;
+    --cor-borda-clara:#eeeeee;
+
+    /* Outros */
+    --sombra-card:0 2px 8px rgba(0,0,0,.08);
+
+    --radius:10px;
+    --radius-btn:8px;
+
+    --fonte-padrao:Arial, Helvetica, sans-serif;
+}

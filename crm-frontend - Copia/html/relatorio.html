@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>CRM - Relatórios</title>
+
+<link rel="stylesheet" href="../styles/layout.css">
+<link rel="stylesheet" href="../styles/global.css">
+<link rel="stylesheet" href="../styles/home.css">
+
+</head>
+
+
+<body>
+
+
+<div class="container">
+
+
+<header>
+
+<nav class="navbar">
+
+<ul>
+
+<li><a href="cadastrar.html"><button>Cadastrar</button></a></li>
+
+<li><a href="consultar.html"><button>Consultar</button></a></li>
+
+<li><a href="relatorio.html"><button>Relatórios</button></a></li>
+
+<li><a href="auditoria.html"><button>Auditoria</button></a></li>
+
+<li class="home-li">
+<a href="home.html">
+<button>← Home</button>
+</a>
+</li>
+
+</ul>
+
+</nav>
+
+</header>
+
+
+
+<section class="cards">
+
+
+<div class="card">
+
+<h3>Total de Clientes</h3>
+
+<span id="totalClientes">0</span>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>Clientes Ativos</h3>
+
+<span id="clientesAtivos">0</span>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>Clientes Inativos</h3>
+
+<span id="clientesInativos">0</span>
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+<section class="box">
+
+
+<h2>Relatório Geral</h2>
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>ID</th>
+<th>Nome</th>
+<th>Email</th>
+<th>Telefone</th>
+<th>Status</th>
+<th>Cadastro</th>
+
+
+</tr>
+
+
+</thead>
+
+
+
+<tbody id="relatorioGeral">
+
+
+</tbody>
+
+
+
+</table>
+
+
+
+</section>
+
+
+
+
+
+
+
+<section class="box">
+
+
+<h2>Clientes Ativos</h2>
+
+
+<ul id="listaAtivos">
+
+
+</ul>
+
+
+</section>
+
+
+
+
+
+
+<section class="box">
+
+
+<h2>Clientes Inativos</h2>
+
+
+<ul id="listaInativos">
+
+
+</ul>
+
+
+</section>
+
+
+
+
+
+
+
+<section class="box">
+
+
+<h2>Clientes Cadastrados por Data</h2>
+
+
+
+<table>
+
+
+<thead>
+
+<tr>
+
+<th>Data</th>
+
+<th>Quantidade</th>
+
+
+</tr>
+
+
+</thead>
+
+
+<tbody id="clientesData">
+
+
+</tbody>
+
+
+</table>
+
+
+</section>
+
+
+
+
+
+</div>
+
+
+
+<script src="../js/banco.js"></script>
+
+<script src="../js/relatorio.js"></script>
+
+
+</body>
+
+
+</html>
